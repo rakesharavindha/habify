@@ -6,14 +6,14 @@ import { ThemeProvider, themeInitScript } from '@/components/theme-provider'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Remindly — Habit Reminders',
+  title: 'Mealify — Mess Meal Tracker & Alarms',
   description:
-    'A Material You habit reminder app with full-screen reminders, dynamic accent colors, and an OLED theme.',
+    "Pick your mess, see today's menu, and get full-screen meal alarms for breakfast, lunch, snacks, and dinner — plus water and workout reminders.",
   generator: 'v0.app',
-  applicationName: 'Remindly',
+  applicationName: 'Mealify',
   appleWebApp: {
     capable: true,
-    title: 'Remindly',
+    title: 'Mealify',
     statusBarStyle: 'black-translucent',
   },
 }
