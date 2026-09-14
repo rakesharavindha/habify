@@ -35,20 +35,23 @@ export function HomeScreen() {
   const eatenCount = MEAL_ORDER.filter((m) => isMealEaten(m)).length
 
   const greeting = useMemo(() => {
+    if (!ready) return ''
     const h = new Date().getHours()
     if (h < 12) return 'Good morning'
     if (h < 17) return 'Good afternoon'
     return 'Good evening'
-  }, [])
+  }, [ready])
 
   const dateLabel = useMemo(
     () =>
-      new Date().toLocaleDateString([], {
-        weekday: 'long',
-        month: 'long',
-        day: 'numeric',
-      }),
-    [],
+      ready
+        ? new Date().toLocaleDateString([], {
+            weekday: 'long',
+            month: 'long',
+            day: 'numeric',
+          })
+        : '',
+    [ready],
   )
 
   return (
